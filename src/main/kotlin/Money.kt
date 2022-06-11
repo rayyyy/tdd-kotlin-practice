@@ -1,5 +1,8 @@
-import java.util.Currency
-
+// TODO: 2022/06/11 $5+10CHF =$10
+// TODO: 2022/06/11 money 丸め
+// TODO: 2022/06/11 hashcode
+// TODO: 2022/06/11 nullとの等価性比較
+// TODO: 2022/06/11 他のオブジェクトとの等価性比較
 open class Money(protected var amount: Int, protected var currency: String) {
     fun times(multiplier: Int): Money {
         return Money(this.amount*multiplier, currency)
