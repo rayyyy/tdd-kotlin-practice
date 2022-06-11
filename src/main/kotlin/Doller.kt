@@ -5,11 +5,10 @@
 // TODO: 2022/06/11 nullとの等価性比較
 // TODO: 2022/06/11 他のオブジェクトとの等価性比較
 // TODO: 2022/06/11 DollarとFrancの重複 
-// TODO: 2022/06/11 equalsの一般化 
 // TODO: 2022/06/11 timesの一般化
+// TODO: 2022/06/11 FrancとDollarを比較する
+// TODO: 2022/06/11 通貨の概念
+// TODO: 2022/06/11 testFrancMultiplicationを削除する？
 
-class Dollar(override var amount: Int) : Money() {
-    fun times(multiplier: Int): Dollar {
-        return Dollar(amount*multiplier)
-    }
+class Dollar(amount: Int, currency: String): Money(amount, currency) {
 }
