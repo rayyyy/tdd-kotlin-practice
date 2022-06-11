@@ -3,9 +3,13 @@
 // TODO: 2022/06/11 hashcode
 // TODO: 2022/06/11 nullとの等価性比較
 // TODO: 2022/06/11 他のオブジェクトとの等価性比較
-open class Money(protected var amount: Int, protected var currency: String) {
+open class Money(protected var amount: Int, protected var currency: String): Expression {
     fun times(multiplier: Int): Money {
         return Money(this.amount*multiplier, currency)
+    }
+
+    fun plus(addend: Money): Expression {
+        return Money(amount + addend.amount, currency)
     }
 
     fun currency(): String {
